@@ -1,0 +1,60 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: royalblue; /* Royal blue background */
+    color: white; /* White text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column; /* Stack the header and buttons vertically */
+}
+
+/* Header styles */
+header {
+    margin-bottom: 20px;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Paragraph under header */
+header p {
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px; /* Set a maximum width for the paragraph */
+    margin: 0 auto 30px auto; /* Center the paragraph and add space below */
+}
+
+/* Career buttons container (flex row layout) */
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 20px; /* Space between buttons */
+}
+
+/* Individual button styles */
+.career-button {
+    background-color: transparent;
+    color: white; /* White text color for the buttons */
+    border: 2px solid white; /* White border for buttons */
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 250px; /* Set a fixed width for the buttons */
+    height: 50px; /* Set a consistent height for the buttons */
+}
+
+/* Button hover effect */
+.career-button:hover {
+    background-color: white;
+    color: royalblue; /* Royal blue text when hovered */
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Select Placement Type</title>
+    <style>
+        /* Basic reset for margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Main container */
+        .container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Title Styling */
+        h1 {
+            color: royalblue; /* Royal Blue */
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        /* Label Styling */
+        label {
+            font-size: 1.2em;
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Dropdown styling */
+        select {
+            padding: 10px;
+            font-size: 1.1em;
+            border: 2px solid royalblue; /* Royal blue */
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: #333;
+            width: 60%;
+            max-width: 300px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        /* Dropdown focus state */
+        select:focus {
+            outline: none;
+            border-color: #2563eb; /* Lighter Blue */
+            background-color: #ffffff;
+        }
+
+        /* Button styling */
+        button {
+            padding: 12px 30px;
+            font-size: 1.2em;
+            border: none;
+            background-color: royalblue; /* Royal Blue */
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: royalblue; /* Lighter Blue on hover */
+        }
+
+        /* Result Display */
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: royalblue; /* Royal Blue */
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            select, button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Select Placement Type</h1>
+
+        <!-- Label and Dropdown -->
+        <label for="placement-type">Choose Placement Type:</label>
+        <select id="placement-type">
+            <option value="select">Type</option>
+            <option value="technical">Technical</option>
+            <option value="non-technical">Non-Technical</option>
+        </select>
+
+        <br>
+
+        <!-- Submit Button -->
+        <button onclick="displaySelection()">Submit</button>
+
+        <!-- Result Display -->
+        <div id="result"></div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Placement Portal</p>
+    </footer>
+
+    <script>
+        function displaySelection() {
+            const placementType = document.getElementById("placement-type").value;
+            const resultDiv = document.getElementById("result");
+
+            if (placementType === "select") {
+                resultDiv.textContent = "Please select a placement type.";
+                resultDiv.style.color = "red";
+            } else if (placementType === "technical") {
+                resultDiv.textContent = "You have selected the Technical Placement.";
+                resultDiv.style.color = "#1e3a8a";  // Royal Blue
+                // Redirect to Technical Jobs page
+                setTimeout(function() {
+                    window.location.href = "tech.html"; // Your technical job page URL
+                }, 1000); // Redirect after 1 second
+            } else if (placementType === "non-technical") {
+                resultDiv.textContent = "You have selected the Non-Technical Placement.";
+                resultDiv.style.color = "#1e3a8a";  // Royal Blue
+                // Redirect to Non-Technical Jobs page
+                setTimeout(function() {
+                    window.location.href = "nontech.html"; // Your non-technical job page URL
+                }, 1000); // Redirect after 1 second
+            }
+        }
+    </script>
+
+</body>
+</html>

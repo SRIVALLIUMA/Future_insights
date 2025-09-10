@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling with gradient background animation */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* Gradient animation for background */
+        @keyframes gradientAnimation {
+            0% {
+                background: linear-gradient(45deg, royalblue, #4c6e9f);
+            }
+            50% {
+                background: linear-gradient(135deg, royalblue, #4c6e9f);
+            }
+            100% {
+                background: linear-gradient(45deg, royalblue, #4c6e9f);
+            }
+        }
+
+        /* Background with gradient animation */
+        body {
+            background: linear-gradient(45deg, royalblue, #4c6e9f);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            position: relative;
+            height: 100%;
+        }
+
+        /* Container to center the content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            z-index: 1;
+        }
+
+        /* Logo styling */
+        .logo img {
+            width: 350px; /* Adjust logo size */
+            margin-bottom: 30px;
+            transform: translateY(0);
+            transition: transform 1s ease-out;
+        }
+
+        .logo:hover img {
+            transform: translateY(-20px); /* Hover effect for logo */
+        }
+
+        /* Headline text styling */
+        .headline {
+            font-size: 3em;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            transform: translateY(0);
+            animation: slideUp 1s ease-out;
+        }
+
+        /* Slide up animation for headline */
+        @keyframes slideUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Paragraph text styling */
+        .description {
+            font-size: 1.2em;
+            color: #f4f4f9;
+            margin-bottom: 30px;
+            max-width: 800px; /* To limit the width of the text */
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* Fade in animation for the description */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Button styling */
+        .btn {
+            background-color: #ffffff;
+            color: royalblue;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        /* Button hover effect */
+        .btn:hover {
+            background-color: royalblue;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            .headline {
+                font-size: 2.5em;
+            }
+
+            .description {
+                font-size: 1.1em;
+            }
+
+            .btn {
+                font-size: 1.1em;
+                padding: 12px 25px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Logo Section as Heading -->
+        <div class="logo">
+            <img src="C:\Users\Honey\Desktop\FUTURE INSIGHTS\LOGO.png" alt="Company Logo">
+        </div>
+
+        <!-- Description -->
+        <div class="description">
+            Explore Endless Opportunities in Career and Higher Studies  Whether you're looking to pursue your dream job or continue your education, the world is full of possibilities. Take the first step today!
+        </div>
+
+        <!-- Start Your Journey Button -->
+        <a href="login.html" class="btn">Start Your Journey</a>
+    </div>
+
+</body>
+</html>
+
+

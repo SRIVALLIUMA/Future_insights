@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        // Function to simulate login and redirect to Career Pathways page
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form submission
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Basic validation
+            if (email && password) {
+                // Simulate successful login (you could add server-side validation here)
+                alert('Login successful!');
+                window.location.href = "pathways.html"; // Redirect to Career Pathways page
+            } else {
+                alert('Please enter both email and password.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Log In</h2>
+        <form id="login-form" onsubmit="handleLogin(event)">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="cta-button">Log In</button>
+        </form>
+        
+        <p>Don't have an account? <a href="sign up.html">Sign Up</a></p>
+    </div>
+</body>
+</html>

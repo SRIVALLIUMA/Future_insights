@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country and Competitive Exam Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: royalblue; /* Royal Blue */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color:royalblue; /* Royal Blue */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            color: royalblue;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid royalblue;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            color: royalblue;
+        }
+        select:focus {
+            border-color: #0066cc;
+            outline: none;
+            background-color: #e6f2ff;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: royalblue;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Competitive Exams Selection</h1>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h2>Select Your Country and Exam</h2>
+            <form id="countryForm">
+                <!-- Country Dropdown -->
+                <label for="country">Choose Your Country</label>
+                <select id="country" name="country">
+                    <option value="">Select Country</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="germany">Germany</option>
+                    <option value="india">India</option>
+                    <option value="singapore">Singapore</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="usa">United States</option>
+                    
+                    
+                    
+                </select>
+
+                <!-- Submit Button -->
+                <button type="button" onclick="redirectToPage()">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPage() {
+            // Get the selected country value
+            const country = document.getElementById('country').value;
+
+            // Redirect based on country selection
+            if (country === 'australia') {
+                window.location.href = "australia.html";  // Redirect to Australia page
+            } else if (country === 'usa') {
+                window.location.href = "usa.html";  // Redirect to USA page (you need to create this page)
+            } else if (country === 'canada') {
+                window.location.href = "canada.html";  // Redirect to Canada page (you need to create this page)
+            } else if (country === 'uk') {
+                window.location.href = "uk.html";  // Redirect to UK page (you need to create this page)
+            } else if (country === 'germany') {
+                window.location.href = "germany.html";  // Redirect to Germany page (you need to create this page)
+            } else if (country === 'india') {
+                window.location.href = "india.html";  // Redirect to India page (you need to create this page)
+            } else if (country === 'singapore') {
+                window.location.href = "singapore.html";  // Redirect to Singapore page (you need to create this page)
+            } else {
+                alert("Please select a country first!");
+            }
+        }
+    </script>
+</body>
+</html>
